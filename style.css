@@ -6,3 +6,9 @@
     height: 512px;
     width: 512px;
 }
+
+button {
+    width: 60px;
+    height: 20px;
+    font-size: 12px;
+}
