@@ -1,5 +1,9 @@
 const container = document.getElementById("container");
 const buttons = document.querySelectorAll(".pixel-button");
+const colorPicker = document.getElementById("color-picker");
+const rainbowButton = document.getElementById("rainbow-button");
+const eraseButton = document.getElementById("erase-button");
+const clearButton = document.getElementById("clear-button");
 
 const createPixels = (size) => {
     // Clear existing pixels
@@ -14,11 +18,39 @@ const createPixels = (size) => {
         div.setAttribute("class", "pixels");
         div.style.width = `${size}px`;
         div.style.height = `${size}px`;
-        div.style.backgroundColor = "orange";
-
+        div.style.backgroundColor = "#4c16fd";
+        
         div.addEventListener("mouseenter", () => {
-            div.style.backgroundColor = "lightgray";
+            div.style.backgroundColor = colorPicker.value;
         });
+
+        function getRainbowPixels() {
+            const randomColor = "#" + Math.floor(Math.random()*16777215).toString(16)
+            div.style.backgroundColor = randomColor
+        }
+        
+        rainbowButton.addEventListener("click", getRainbowPixels)
+
+        function resetPixelColors() {
+            div.style.backgroundColor = "#4c16fd"
+        }
+
+        function activateEraser() {
+            div.addEventListener("mouseenter", () => {
+                div.style.backgroundColor = "#4c16fd";
+            })
+        }
+
+        function activateRainbow() {
+            div.addEventListener("mouseenter", () => {
+                const randomColor = "#" + Math.floor(Math.random()*16777215).toString(16)
+                div.style.backgroundColor = randomColor;
+            })
+        }
+        
+        clearButton.addEventListener("click", resetPixelColors)
+        eraseButton.addEventListener("click", activateEraser)
+        rainbowButton.addEventListener("click", activateRainbow)
 
         container.appendChild(div);
     }

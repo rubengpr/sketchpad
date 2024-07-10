@@ -1,19 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="/images/brush.png">
     <link rel="stylesheet" href="style.css">
     <title>Sketchpad</title>
 </head>
 <body>
+    <div id="header">
+        <h1>Etch-a-Sketch</h1>
+    </div>
     <div id="container">
 
     </div>
-    <h4>Pixel size</h4>
-    <button class="pixel-button" id="16px-button">16px</button>
-    <button class="pixel-button" id="32px-button">32px</button>
-    <button class="pixel-button" id="64px-button">64px</button>
+    <div class="button-container">
+        <button class="pixel-button" id="16px-button">16px</button>
+        <button class="pixel-button" id="32px-button">32px</button>
+        <button class="pixel-button" id="64px-button">64px</button>
+        <input type="color" id="color-picker" value="#DEDEDE">
+        <button id="rainbow-button">Rainbow</button>
+        <button id="erase-button">Erase</button>
+        <button id="clear-button">Clear</button>
+    </div>
 <script src="script.js"></script>
 </body>
 </html>

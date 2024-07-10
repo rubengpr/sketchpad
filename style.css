@@ -1,3 +1,20 @@
+body {
+    font-family: "Press Start 2P", system-ui;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+}
+
+h1 {
+    margin: 0;
+}
+
+#header {
+    width: auto;
+    padding: 40px 0;
+}
+
 #container {
     display: flex;
     flex-direction: row;
@@ -7,8 +24,30 @@
     width: 512px;
 }
 
+.button-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 500px;
+    margin: 20px;
+}
+
 button {
-    width: 60px;
-    height: 20px;
-    font-size: 12px;
+    font-family: "Press Start 2P", system-ui;
+    font-size: 7px;
+    padding: 8px 12px;
+    border: 1px solid gray;
+    border-radius: 4px;
+    background-color: #4c16fd;
+    color: rgb(234, 233, 233);
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #4c17fdcc;
+}
+
+#color-picker {
+    background-color: #4c16fd;
+    border-radius: 4px;
 }
