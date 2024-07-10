@@ -24,15 +24,9 @@ const createPixels = (size) => {
             div.style.backgroundColor = colorPicker.value;
         });
 
-        function getRainbowPixels() {
-            const randomColor = "#" + Math.floor(Math.random()*16777215).toString(16)
-            div.style.backgroundColor = randomColor
-        }
-        
-        rainbowButton.addEventListener("click", getRainbowPixels)
-
         function resetPixelColors() {
             div.style.backgroundColor = "#4c16fd"
+            colorPicker.value = "#DEDEDE"
         }
 
         function activateEraser() {
@@ -42,7 +36,7 @@ const createPixels = (size) => {
         }
 
         function activateRainbow() {
-            div.addEventListener("mouseenter", () => {
+            div.addEventListener("mouseenter", function() {
                 const randomColor = "#" + Math.floor(Math.random()*16777215).toString(16)
                 div.style.backgroundColor = randomColor;
             })
